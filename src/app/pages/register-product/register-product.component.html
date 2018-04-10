@@ -1,170 +1,250 @@
-<div class="row" id="validation">
-    <div class="col-12">
-        <div class="card wizard-content">
-            <div class="card-body">
-                <h1 class="card-title">Registrar Producto</h1>
-                <h6 class="card-subtitle">You can us the validation like what we did</h6>
-                <form action="#" class="validation-wizard wizard-circle">
-                    <!-- Step 1 -->
-                    <h6>Step 1</h6>
-                    <section>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wfirstName2"> First Name : <span class="danger">*</span> </label>
-                                    <input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
+<div class="container-fluid animated fadeInUp jumbotron">
+
+    <h1 class="text-h1">
+        <i class="fa fa-barcode"></i> Register Product </h1>
+    <hr class="my-4">
+    <form ngNativeValidate novalidate="novalidate">
+        <!--<form ngNativeValidate [formGroup]="forma" (ngSubmit)="guardarCambios()" novalidate="novalidate">-->
+        <legend>
+            <i class="fa fa-car text-success "></i> Transportes cercanos al Alojamiento</legend>
+        <div class="form-group container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="row">
+
+                        <div class="card">
+                            <div class="card-body" align="center">
+                                <h4 class="card-title text-primary"> <i class="fa fa-cloud-upload"></i> Product image </h4>
+                                <label for="input-file-now"> <small>Select the product image</small> </label>
+                                <img src="assets/images/sinImagen.jpg" class="w150">
+                                <!--<img *ngIf="imgHabitacionTemp" [src]="imgHabitacionTemp" class="w150">-->
+                                <!--<input (change)="seleccionImagenHabitacion($event.target.files[0])" type="file" id="imgHabitacion" class="dropify" required formControlName="imgHabitacion" />-->
+                                <input type="file" id="imgProduct" class="dropify" required formControlName="imgProduct" />
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wlastName2"> Last Name : <span class="danger">*</span> </label>
-                                    <input type="text" class="form-control required" id="wlastName2" name="lastName"> </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="row">
+                        <label for="productName" class="col-lg-6 control-label">Product Name </label>
+                        <div class="col-lg-6" [ngClass]="{'alert alert-danger':!forma.get('productName').valid}">
+                            <input type="text" name="productName">
+                            <div *ngIf="!forma.controls['productName'].valid" class="form-control-feedback">
+                                <small>*Required</small>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wemailAddress2"> Email Address : <span class="danger">*</span> </label>
-                                    <input type="email" class="form-control required" id="wemailAddress2" name="emailAddress"> </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wphoneNumber2">Phone Number :</label>
-                                    <input type="tel" class="form-control" id="wphoneNumber2"> </div>
+                        <label for="market" class="col-lg-6 control-label">Market </label>
+                        <div class="col-lg-6" [ngClass]="{'alert alert-danger':!forma.get('market').valid}">
+                            <select class="form-control" id="market" required formControlName="market">
+                                        <option>Caribe</option>
+                                        <option>PEBAC</option>                         
+                                </select>
+                            <div *ngIf="!forma.controls['tipoVivienda'].valid" class="form-control-feedback">
+                                <small>*Required</small>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wlocation2"> Select City : <span class="danger">*</span> </label>
-                                    <select class="custom-select form-control required" id="wlocation2" name="location">
-                                      <option value="">Select City</option>
-                                      <option value="India">India</option>
-                                      <option value="USA">USA</option>
-                                      <option value="Dubai">Dubai</option>
-                                  </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wdate2">Date of Birth :</label>
-                                    <input type="date" class="form-control" id="wdate2"> </div>
+                        <br>
+                        <label for="country" class="col-lg-6 control-label">Country</label>
+
+                        <div class="col-lg-6" [ngClass]="{'alert alert-danger':!forma.get('country').valid}">
+                            <select class=" form-control " id="country" required formControlName="country">
+                                                <option>Chile</option>
+                                                <option>Perú</option>
+                                                <option>Republica Dominicana</option>                            
+                                             </select>
+                            <div *ngIf="!forma.controls['country'].valid " class="form-control-feedback ">
+                                <small>*Required</small>
                             </div>
                         </div>
-                    </section>
-                    <!-- Step 2 -->
-                    <h6>Step 2</h6>
-                    <section>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="jobTitle2">Company Name :</label>
-                                    <input type="text" class="form-control required" id="jobTitle2">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="webUrl3">Company URL :</label>
-                                    <input type="url" class="form-control required" id="webUrl3" name="webUrl3"> </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="shortDescription3">Short Description :</label>
-                                    <textarea name="shortDescription" id="shortDescription3" rows="6" class="form-control"></textarea>
-                                </div>
+                        <label for="brand" class="col-lg-6 control-label">Brand</label>
+
+                        <div class="col-lg-6" [ngClass]="{'alert alert-danger':!forma.get('brand').valid}">
+                            <select class=" form-control" id="brand" required formControlName="brand">
+                                                <option>Chile</option>
+                                                <option>Perú</option>
+                                                <option>Republica Dominicana</option>                            
+                                             </select>
+                            <div *ngIf="!forma.controls['brand'].valid " class="form-control-feedback ">
+                                <small>*Required</small>
                             </div>
                         </div>
-                    </section>
-                    <!-- Step 3 -->
-                    <h6>Step 3</h6>
-                    <section>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wint1">Interview For :</label>
-                                    <input type="text" class="form-control required" id="wint1"> </div>
-                                <div class="form-group">
-                                    <label for="wintType1">Interview Type :</label>
-                                    <select class="custom-select form-control required" id="wintType1" data-placeholder="Type to search cities" name="wintType1">
-                                      <option value="Banquet">Normal</option>
-                                      <option value="Fund Raiser">Difficult</option>
-                                      <option value="Dinner Party">Hard</option>
-                                  </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="wLocation1">Location :</label>
-                                    <select class="custom-select form-control required" id="wLocation1" name="wlocation">
-                                      <option value="">Select City</option>
-                                      <option value="India">India</option>
-                                      <option value="USA">USA</option>
-                                      <option value="Dubai">Dubai</option>
-                                  </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="wjobTitle2">Interview Date :</label>
-                                    <input type="date" class="form-control required" id="wjobTitle2">
-                                </div>
-                                <div class="form-group">
-                                    <label>Requirements :</label>
-                                    <div class="c-inputs-stacked">
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Employee</span> </label>
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Contract</span> </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Step 4 -->
-                    <h6>Step 4</h6>
-                    <section>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="behName1">Behaviour :</label>
-                                    <input type="text" class="form-control required" id="behName1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="participants1">Confidance</label>
-                                    <input type="text" class="form-control required" id="participants1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="participants1">Result</label>
-                                    <select class="custom-select form-control required" id="participants1" name="location">
-                                      <option value="">Select Result</option>
-                                      <option value="Selected">Selected</option>
-                                      <option value="Rejected">Rejected</option>
-                                      <option value="Call Second-time">Call Second-time</option>
-                                  </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="decisions1">Comments</label>
-                                    <textarea name="decisions" id="decisions1" rows="4" class="form-control"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Rate Interviwer :</label>
-                                    <div class="c-inputs-stacked">
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">1 star</span> </label>
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">2 star</span> </label>
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">3 star</span> </label>
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">4 star</span> </label>
-                                        <label class="inline custom-control custom-checkbox block">
-                                          <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">5 star</span> </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </form>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="row">
+                <label for="market" class="col-lg-3 control-label">Market </label>
+                <div class="col-lg-3" [ngClass]="{'alert alert-danger':!forma.get('market').valid}">
+                    <select class="form-control" id="market" required formControlName="market">
+                            <option>Caribe</option>
+                            <option>PEBAC</option>                         
+                    </select>
+                    <div *ngIf="!forma.controls['tipoVivienda'].valid" class="form-control-feedback">
+                        <small>*Required</small>
+                    </div>
+                </div>
+                <label for="country" class="col-lg-3 control-label">Country</label>
+
+                <div class="col-lg-3" [ngClass]="{'alert alert-danger':!forma.get('country').valid}">
+                    <select class=" form-control " id="country" required formControlName="country">
+                            <option>Chile</option>
+                            <option>Perú</option>
+                            <option>Republica Dominicana</option>                            
+                         </select>
+                    <div *ngIf="!forma.controls['country'].valid " class="form-control-feedback ">
+                        <small>*Required</small>
+                    </div>
+                </div>
+            </div>-->
+
+            <br>
+            <div class="row ">
+                <label for="zona " class="col-lg-4 control-label ">¿En que zona se encuentra ubicado el alojamiento? </label>
+                <div class="col-lg-2 " [ngClass]="{'alert alert-danger':!forma.get('zona').valid}">
+                    <select class="form-control " id="zona " required formControlName="zona">
+                            <option>Centro</option>
+                            <option>Sur</option>
+                            <option>Norte</option>
+                            <option>Oriente</option>
+                            <option>Occidente</option>
+                         </select>
+                    <div *ngIf="!forma.controls['zona'].valid " class="form-control-feedback ">
+                        <small>*Required</small>
+                    </div>
+                </div>
+                <label for="tipoHabitacion" class="col-lg-2 control-label ">Tipo de Habitación</label>
+                <div class="col-lg-4 " [ngClass]="{'alert alert-danger':!forma.get('tipoHabitacion').valid}">
+                    <select class="form-control " id="tipoHabitacion " required formControlName="tipoHabitacion">
+                            <option>Individual</option>
+                            <option>Compartida</option>
+                            <option>Otra</option>
+                        </select>
+                    <div *ngIf="!forma.controls['tipoHabitacion'].valid " class="form-control-feedback ">
+                        <small>*Required</small>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+        <legend> <i class="fa fa-i-cursor text-success "></i> Descripción del Alojamiento</legend>
+        <div class="row " [ngClass]="{'alert alert-danger':!forma.get('descripcionAlojamiento').valid}">
+            <div class="col-lg-12 ">
+                <div class="form-group ">
+                    <textarea class="form-control " rows="3 " required formControlName="descripcionAlojamiento"></textarea>
+                </div>
+            </div>
+            <!--<div *ngIf="forma.controls[ 'descripcionAlojamiento'].errors?.required" class="form-control-feedback">
+                <small> El tipo de alojamiento es requerido</small>
+            </div>
+            <div *ngIf="forma.controls[ 'descripcionAlojamiento'].errors?.minlength" class="form-control-feedback">
+                <small>La descripción de contener mínimo 50 caractéres</small>
+            </div>-->
+        </div>
+        <hr>
+        <legend>
+            <i class="fa fa-car text-success "></i> Transportes cercanos al Alojamiento</legend>
+        <div class="alert alert-warning " role="alert ">
+            <strong>Atención!</strong> Responde Si o No, si el tipo de transporte se encuentra cerca al alojamiento
+        </div>
+        <div class="row ">
+            <label for="publico" class="col-lg-3 control-label ">Transporte Público </label>
+
+            <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('publico').valid}">
+                <select class="form-control" id="publico" required formControlName="publico">
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                <div *ngIf="!forma.controls['publico'].valid " class="form-control-feedback">
+                    <small>*Required</small>
+                </div>
+            </div>
+
+            <label for="uber" class="col-lg-3 control-label ">Uber</label>
+            <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('uber').valid}">
+                <select class="form-control" id="uber" required formControlName="uber">
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                <div *ngIf="!forma.controls['uber'].valid " class="form-control-feedback ">
+                    <small>*Required</small>
+                </div>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <label for="bicicleta" class="col-lg-3 control-label ">Bicicleta</label>
+            <div class="col-lg-3" [ngClass]="{'alert alert-danger':!forma.get('bicicleta').valid}">
+                <select class="form-control" id="bicicleta" required formControlName="bicicleta">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                <div *ngIf="!forma.controls['bicicleta'].valid " class="form-control-feedback ">
+                    <small>*Required</small>
+                </div>
+            </div>
+            <label for="taxi" class="col-lg-3 control-label ">Taxi</label>
+
+            <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('taxi').valid}">
+                <select class="form-control" id="taxi" required formControlName="taxi">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                <div *ngIf="!forma.controls['taxi'].valid " class="form-control-feedback ">
+                    <small>*Required</small>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label for="caminando" class="col-lg-3 control-label ">Caminando </label>
+
+            <div class="col-lg-3" [ngClass]="{'alert alert-danger':!forma.get('caminando').valid}">
+                <select class="form-control" id="caminando" required formControlName="caminando">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                <div *ngIf="!forma.controls['caminando'].valid " class="form-control-feedback ">
+                    <small>*Required</small>
+                </div>
+            </div>
+            <label for="metro" class="col-lg-3 control-label ">Metro</label>
+
+            <div class="col-lg-3" [ngClass]="{'alert alert-danger':!forma.get('metro').valid}">
+                <select class="form-control" id="metro" required formControlName="metro">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                <div *ngIf="!forma.controls['metro'].valid " class="form-control-feedback ">
+                    <small>*Required</small>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </form>
+    <br>
+    <div class="footerNavWrap clearfix">
+        <button class="btn btn-success pull-left btn-fyi">
+                         <i class="fa fa-eraser "></i> Limpiar
+                    </button>
+        <button [disabled]="!forma.valid " type="submit " class="btn btn-primary pull-right btn-fyi">
+                         <i class="fa fa-arrow-circle-right "></i> Siguiente
+                        </button>
+
+        <!--  <button (click)="limpiar()" class="btn btn-success pull-left btn-fyi">
+                                <i class="fa fa-eraser "></i> Limpiar
+                           </button>
+               <button (click)="guardarCambios()" [disabled]="!forma.valid " type="submit " class="btn btn-primary pull-right btn-fyi">
+                                <i class="fa fa-arrow-circle-right "></i> Siguiente
+                               </button>-->
     </div>
+
 </div>
