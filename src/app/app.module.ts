@@ -18,6 +18,7 @@ import { RegisterComponent } from './login/register.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProgressComponent } from './pages/progress/progress.component';
+import { RegisterProductComponent } from './pages/register-product/register-product.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProgressComponent } from './pages/progress/progress.component';
     RegisterComponent,
     UsersComponent,
     ProfileComponent,
-    ProgressComponent
+    ProgressComponent,
+    RegisterProductComponent
   ],
   imports: [
     BrowserModule,

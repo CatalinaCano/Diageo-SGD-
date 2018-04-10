@@ -9,6 +9,7 @@ import { RegisterComponent } from './login/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ProgressComponent } from './pages/progress/progress.component';
+import { RegisterProductComponent } from './pages/register-product/register-product.component';
 
 const AppRoutes: Routes = [
     {
@@ -20,6 +21,7 @@ const AppRoutes: Routes = [
             { path: 'profile', component: ProfileComponent },
             { path: 'users', component: UsersComponent },
             { path: 'progress', component: ProgressComponent },
+            { path: 'registerProduct', component: RegisterProductComponent },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         ]
     },
