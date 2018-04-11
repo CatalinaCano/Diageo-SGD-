@@ -10,6 +10,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { RegisterProductComponent } from './pages/register-product/register-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const AppRoutes: Routes = [
     {
@@ -22,6 +23,7 @@ const AppRoutes: Routes = [
             { path: 'users', component: UsersComponent },
             { path: 'progress', component: ProgressComponent },
             { path: 'registerProduct', component: RegisterProductComponent },
+            { path: 'productDetail', component: ProductDetailComponent },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         ]
     },

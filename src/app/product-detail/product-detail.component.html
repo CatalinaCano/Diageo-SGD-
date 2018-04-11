@@ -15,11 +15,7 @@
                         <div class="card">
                             <div class="card-body" align="center">
                                 <h4 class="card-title text-primary"> <i class="fa fa-file-image-o"></i> Product Image </h4>
-                                <label for="input-file-now"> <small>Select the product image</small> </label>
-                                <img src="assets/images/sinImagen.jpg" class="w150">
-                                <!--<img *ngIf="imgHabitacionTemp" [src]="imgHabitacionTemp" class="w150">-->
-                                <!--<input (change)="seleccionImagenHabitacion($event.target.files[0])" type="file" id="imgHabitacion" class="dropify" required formControlName="imgHabitacion" />-->
-                                <input type="file" id="imgProduct" class="dropify" required formControlName="imgProduct" />
+                                <img src="assets/images/products/chocoBerry.png">
                             </div>
 
                         </div>
@@ -30,7 +26,7 @@
                     <div class="row">
                         <label for="productName" class="col-lg-4 col-sm-12 control-label">Product Name </label>
                         <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('productName').valid}">
-                            <input type="text" class="form-control" name="productName">
+                            <input type="text" class="form-control" name="productName" value="Baileys Chococherry">
                             <div *ngIf="!forma.controls['productName'].valid" class="form-control-feedback">
                                 <small>*Required</small>
                             </div>
@@ -38,9 +34,9 @@
                         <label for="market" class="col-lg-4 col-sm-12control-label">Market </label>
                         <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('market').valid}">
                             <select class="form-control" id="market" required formControlName="market">
-                                        <option>Caribe</option>
-                                        <option>PEBAC</option>                         
-                                </select>
+                                      <option>Caribe</option>
+                                      <option>PEBAC</option>                         
+                              </select>
                             <div *ngIf="!forma.controls['tipoVivienda'].valid" class="form-control-feedback">
                                 <small>*Required</small>
                             </div>
@@ -50,10 +46,11 @@
 
                         <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('country').valid}">
                             <select class=" form-control " id="country" required formControlName="country">
-                                                <option>Chile</option>
-                                                <option>Perú</option>
-                                                <option>Republica Dominicana</option>                            
-                                             </select>
+                                              <option>Republica Dominicana</option>     
+                                              <option>Chile</option>
+                                              <option>Perú</option>
+                                                                     
+                                           </select>
                             <div *ngIf="!forma.controls['country'].valid " class="form-control-feedback ">
                                 <small>*Required</small>
                             </div>
@@ -62,22 +59,22 @@
 
                         <div class="col-lg-8" [ngClass]="{'alert alert-danger':!forma.get('brand').valid}">
                             <select class=" form-control" id="brand" required formControlName="brand">
-                                                <option>1942 Don Julio 70 Anejo</option>
-                                                <option>Baileys Chococherry</option>
-                                                <option>Baileys Dulce De Leche</option>                            
-                                                <option>Baileys Espresso Creme</option>                            
-                                                <option>Baileys Original</option>                            
-                                                <option>Baileys Vanilla</option>                            
-                                                <option>Bells Original</option>                            
-                                                <option>Black & White Blended Whisky</option>                            
-                                                <option>Buchanan's DeLuxe Aged 12 Years</option>                            
-                                                <option>Buchanan's Master</option>                            
-                                                <option>Buchanan's Red Seal</option>                            
-                                                <option>Buchanan's Special Reserve Aged 18 Years</option>                            
-                                                <option>Bulleit Bourbon</option>                            
-                                                <option>Caol Ila</option>                            
-                                                <option>Cardhu 12YO</option>                            
-                                             </select>
+                                              <option>Baileys Chococherry</option>
+                                              <option>1942 Don Julio 70 Anejo</option>                                              
+                                              <option>Baileys Dulce De Leche</option>                            
+                                              <option>Baileys Espresso Creme</option>                            
+                                              <option>Baileys Original</option>                            
+                                              <option>Baileys Vanilla</option>                            
+                                              <option>Bells Original</option>                            
+                                              <option>Black & White Blended Whisky</option>                            
+                                              <option>Buchanan's DeLuxe Aged 12 Years</option>                            
+                                              <option>Buchanan's Master</option>                            
+                                              <option>Buchanan's Red Seal</option>                            
+                                              <option>Buchanan's Special Reserve Aged 18 Years</option>                            
+                                              <option>Bulleit Bourbon</option>                            
+                                              <option>Caol Ila</option>                            
+                                              <option>Cardhu 12YO</option>                            
+                                           </select>
                             <div *ngIf="!forma.controls['brand'].valid " class="form-control-feedback ">
                                 <small>*Required</small>
                             </div>
@@ -87,23 +84,23 @@
 
                         <div class="col-lg-8" [ngClass]="{'alert alert-danger':!forma.get('abv').valid}">
                             <select class=" form-control" id="abv" required formControlName="abv">
-                                                <option>4</option>
-                                                <option>4,8</option>
-                                                <option>5</option>                            
-                                                <option>16</option>                            
-                                                <option>17</option>                            
-                                                <option>25</option>                            
-                                                <option>29</option>                            
-                                                <option>35</option>                            
-                                                <option>37,5</option>                            
-                                                <option>38</option>                            
-                                                <option>40</option>                            
-                                                <option>43</option>                            
-                                                <option>45</option>                            
-                                                <option>45,8</option>                            
-                                                <option>46,8</option>                            
-                                                <option>47,3</option>                            
-                                             </select>
+                                              <option>17</option>
+                                              <option>4</option>
+                                              <option>4,8</option>
+                                              <option>5</option>                            
+                                              <option>16</option>         
+                                              <option>25</option>                            
+                                              <option>29</option>                            
+                                              <option>35</option>                            
+                                              <option>37,5</option>                            
+                                              <option>38</option>                            
+                                              <option>40</option>                            
+                                              <option>43</option>                            
+                                              <option>45</option>                            
+                                              <option>45,8</option>                            
+                                              <option>46,8</option>                            
+                                              <option>47,3</option>                            
+                                           </select>
                             <div *ngIf="!forma.controls['abv'].valid " class="form-control-feedback ">
                                 <small>*Required</small>
                             </div>
@@ -113,25 +110,25 @@
 
                         <div class="col-lg-8" [ngClass]="{'alert alert-danger':!forma.get('localClasification').valid}">
                             <select class=" form-control" id="localClasification" required formControlName="localClasification">
-                                                <option>Tequila</option>
-                                                <option>Liquor</option>
-                                                <option>Whisky</option>                            
-                                                <option>Vodka</option>                            
-                                                <option>Canadian Whisky</option>                            
-                                                <option>Ginebra</option>                            
-                                                <option>Other fermented beverages</option>                            
-                                                <option>Ron</option>                            
-                                                <option>Cream Liquor Whisky Espresso</option>                            
-                                                <option>Gin</option>                          
-                                 
-                                             </select>
+                                              <option>Liquor</option>                
+                                              <option>Tequila</option>                                              
+                                              <option>Whisky</option>                            
+                                              <option>Vodka</option>                            
+                                              <option>Canadian Whisky</option>                            
+                                              <option>Ginebra</option>                            
+                                              <option>Other fermented beverages</option>                            
+                                              <option>Ron</option>                            
+                                              <option>Cream Liquor Whisky Espresso</option>                            
+                                              <option>Gin</option>                          
+                               
+                                           </select>
                             <div *ngIf="!forma.controls['localClasification'].valid " class="form-control-feedback ">
                                 <small>*Required</small>
                             </div>
                         </div>
                         <label for="registrationNumber" class="col-lg-4 col-sm-12 control-label">Registration Number </label>
                         <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('registrationNumber').valid}">
-                            <input type="text" class="form-control" name="registrationNumber">
+                            <input type="text" class="form-control" name="registrationNumber" value="41678">
                             <div *ngIf="!forma.controls['registrationNumber'].valid" class="form-control-feedback">
                                 <small>*Required</small>
                             </div>
@@ -140,12 +137,12 @@
                         <label for="countryOrigin" class="col-lg-4 col-sm-12 control-label">Country Origin</label>
                         <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('countryOrigin').valid}">
                             <select class=" form-control" id="countryOrigin" required formControlName="countryOrigin">
-                                <option>México</option>
-                                <option>Irlanda</option>
-                                <option>Reino Unido</option>                            
-                                <option>Estados Unidos</option>                            
-                                <option>Francia</option>                            
-                             </select>
+                              <option>Irlanda</option>
+                              <option>México</option>                              
+                              <option>Reino Unido</option>                            
+                              <option>Estados Unidos</option>                            
+                              <option>Francia</option>                            
+                           </select>
                             <div *ngIf="!forma.controls['countryOrigin'].valid" class="form-control-feedback">
                                 <small>*Required</small>
                             </div>
@@ -155,9 +152,9 @@
                         <label for="activeProduct" class="col-lg-4 col-sm-12 control-label">Active Product</label>
                         <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('activeProduct').valid}">
                             <select class=" form-control" id="activeProduct" required formControlName="activeProduct">
-                                <option>Yes</option>
-                                <option>No</option>                                                     
-                             </select>
+                              <option>Yes</option>
+                              <option>No</option>                                                     
+                           </select>
                         </div>
 
                     </div>
@@ -169,7 +166,7 @@
                 <label for="registrationDate" class="col-lg-3 col-sm-12 control-label">Registration Date</label>
                 <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('registrationDate').valid}">
                     <!-- <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)"></my-date-picker>-->
-                    <input type="date" class="form-control" id="registrationDate" name="registrationDate">
+                    <input type="date" class="form-control" id="registrationDate" name="registrationDate" placeholder="01/11/2017" value="01/11/2017">
                     <div *ngIf="!forma.controls['registrationDate'].valid " class="form-control-feedback ">
                         <small>*Required</small>
                     </div>
@@ -178,28 +175,28 @@
                 <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('registrationExpirationDate').valid}">
                     <!-- <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)"></my-date-picker>-->
                     <input type="date" class="form-control" id="registrationExpirationDate" name="registrationExpirationDate">
-                    <div *ngIf="!forma.controls['zona'].valid " class="form-control-feedback ">
+                    <div *ngIf="!forma.controls['registrationExpirationDate'].valid " class="form-control-feedback ">
                         <small>*Required</small>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row ">
-                <label for="registrationExpirationDate" class="col-lg-3 col-sm-12 control-label">Registration Expiration Date</label>
-                <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('registrationExpirationDate').valid}">
+                <label for="marketingAuthorizationHolder" class="col-lg-3 col-sm-12 control-label">Marketing Authorization Holder</label>
+                <div class="col-lg-3 " [ngClass]="{'alert alert-danger':!forma.get('marketingAuthorizationHolder').valid}">
                     <!-- <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)"></my-date-picker>-->
-                    <input type="date" class="form-control" id="registrationExpirationDate" name="registrationExpirationDate">
-                    <div *ngIf="!forma.controls['zona'].valid " class="form-control-feedback ">
+                    <input type="text" class="form-control" id="marketingAuthorizationHolder" name="marketingAuthorizationHolder">
+                    <div *ngIf="!forma.controls['marketingAuthorizationHolder'].valid " class="form-control-feedback ">
                         <small>*Required</small>
                     </div>
                 </div>
                 <label for="manufacturer" class="col-lg-2 control-label ">Manufacturer</label>
                 <div class="col-lg-4 " [ngClass]="{'alert alert-danger':!forma.get('manufacturer').valid}">
                     <select class="form-control " id="manufacturer" required formControlName="manufacturer">
-                            <option>Diageo Mexico Comercializadora SA D</option>
-                            <option>R and A Bailey and Co</option>
-                            <option>Diageo Scotland Limited</option>
-                        </select>
+                          <option>Diageo Mexico Comercializadora SA D</option>
+                          <option>R and A Bailey and Co</option>
+                          <option>Diageo Scotland Limited</option>
+                      </select>
                     <div *ngIf="!forma.controls['manufacturer'].valid " class="form-control-feedback ">
                         <small>*Required</small>
                     </div>
@@ -232,9 +229,9 @@
                     <label for="state" class="col-lg-4 col-sm-12 control-label">State</label>
                     <div class="col-lg-8 col-sm-12" [ngClass]="{'alert alert-danger':!forma.get('state').valid}">
                         <select class=" form-control" id="state" required formControlName="state">
-                            <option>Yes</option>
-                            <option>No</option>                                                     
-                         </select>
+                          <option>Yes</option>
+                          <option>No</option>                                                     
+                       </select>
                     </div>
                 </div>
                 <br>
@@ -245,11 +242,11 @@
                             <textarea class="form-control " rows="3 " required formControlName="descripcionAlojamiento"></textarea>
                         </div>
                         <!--<div *ngIf="forma.controls[ 'descripcionAlojamiento'].errors?.required" class="form-control-feedback">
-                <small> El tipo de alojamiento es requerido</small>
-            </div>
-            <div *ngIf="forma.controls[ 'descripcionAlojamiento'].errors?.minlength" class="form-control-feedback">
-                <small>La descripción de contener mínimo 50 caractéres</small>
-            </div>-->
+              <small> El tipo de alojamiento es requerido</small>
+          </div>
+          <div *ngIf="forma.controls[ 'descripcionAlojamiento'].errors?.minlength" class="form-control-feedback">
+              <small>La descripción de contener mínimo 50 caractéres</small>
+          </div>-->
                     </div>
                 </div>
             </div>
@@ -259,18 +256,18 @@
     <br>
     <div class="footerNavWrap clearfix">
         <button class="btn btn-success pull-left btn-fyi">
-                         <i class="fa fa-eraser "></i> Clean
-                    </button>
+                       <i class="fa fa-eraser "></i> Clean
+                  </button>
         <button [disabled]="!forma.valid " type="submit " class="btn btn-primary pull-right btn-fyi">
-                         <i class="fa fa-arrow-circle-right "></i> Siguiente
-                        </button>
+                       <i class="fa fa-arrow-circle-right "></i> Siguiente
+                      </button>
 
         <!--  <button (click)="limpiar()" class="btn btn-success pull-left btn-fyi">
-                                <i class="fa fa-eraser "></i> Limpiar
-                           </button>
-               <button (click)="guardarCambios()" [disabled]="!forma.valid " type="submit " class="btn btn-primary pull-right btn-fyi">
-                                <i class="fa fa-arrow-circle-right "></i> Siguiente
-                               </button>-->
+                              <i class="fa fa-eraser "></i> Limpiar
+                         </button>
+             <button (click)="guardarCambios()" [disabled]="!forma.valid " type="submit " class="btn btn-primary pull-right btn-fyi">
+                              <i class="fa fa-arrow-circle-right "></i> Siguiente
+                             </button>-->
     </div>
 
 </div>

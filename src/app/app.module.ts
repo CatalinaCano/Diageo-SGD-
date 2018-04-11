@@ -23,6 +23,7 @@ import { MyDatePickerModule } from 'mydatepicker';
 import { UiSwitchModule } from 'ngx-toggle-switch';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UsersComponent,
     ProfileComponent,
     ProgressComponent,
-    RegisterProductComponent
+    RegisterProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
