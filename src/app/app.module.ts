@@ -19,6 +19,10 @@ import { UsersComponent } from './pages/users/users.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { RegisterProductComponent } from './pages/register-product/register-product.component';
+import { MyDatePickerModule } from 'mydatepicker';
+import { UiSwitchModule } from 'ngx-toggle-switch';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +44,12 @@ import { RegisterProductComponent } from './pages/register-product/register-prod
   ],
   imports: [
     BrowserModule,
-    APP_ROUTES
+    APP_ROUTES,
+    MyDatePickerModule,
+    UiSwitchModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
