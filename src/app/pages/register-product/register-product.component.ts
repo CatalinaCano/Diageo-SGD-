@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IMyDpOptions } from 'mydatepicker';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -9,10 +8,10 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 })
 export class RegisterProductComponent implements OnInit {
 
-  public myDatePickerOptions: IMyDpOptions = {
+  /*public myDatePickerOptions: IMyDpOptions = {
     // other options...
     dateFormat: 'dd.mm.yyyy',
-};
+};*/
   public myForm: FormGroup;
   forma: FormGroup;
 
